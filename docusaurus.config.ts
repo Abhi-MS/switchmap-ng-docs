@@ -7,9 +7,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: "Switchmap-NG Documentation",
   tagline: "Start your open source journey here",
-  favicon: 'img/icons/favicon_palisadoes.ico',
+  favicon: 'img/favicon.ico',
 
-  url: "https://docs.switchmap-ng.io/",
+  url: "https://switchmap-ng-docs.palisadoes.org",
   baseUrl: '/',
   deploymentBranch: "gh-pages",
 
@@ -61,130 +61,79 @@ const config: Config = {
   ],
 
   themeConfig: {
-    docs: {
-      sidebar: {
-        hideable: false,
-      },
-    },
+    // Replace with your project's social card
+    image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: "Switchmap-NG",
+      title: 'My Site',
       logo: {
-        alt: "Palisadoes logo",
-        src: "img/icons/favicon_palisadoes.ico",
-        className: "LogoAnimation",
+        alt: 'My Site Logo',
+        src: 'img/logo.svg',
       },
       items: [
         {
-          label: "General",
-          position: "left",
-          to: "/",
-          target: "_self",
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Tutorial',
         },
-        
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          label: "Web Guide",
-          position: "left",
-          href: "https://docs-web.switchmap-ng.io/",
-          target: "_self",
-        },
-        {
-          label: "Poller Guide",
-          position: "left",
-          href: "https://docs-poller.switchmap-ng.io/",
-          target: "_self",
-        },
-        {
-          label: "API Guide",
-          position: "left",
-          href: "https://docs-api.switchmap-ng.io/",
-          target: "_self",
-        },
-
-        {
-          label: "Demo",
-          position: "left",
-          href: "http://admin-demo.talawa.io/",
-        },
-        {
-          to: "https://github.com/PalisadoesFoundation",
-          position: "right",
-          className: "header-github-link",
-          "aria-label": "GitHub repository",
-        },
-        {
-          to: "https://www.youtube.com/@PalisadoesOrganization",
-          position: "right",
-          className: "header-youtube-link",
-          "aria-label": "Palisadoes Youtube channel",
+          href: 'https://github.com/facebook/docusaurus',
+          label: 'GitHub',
+          position: 'right',
         },
       ],
-    },
-    colorMode: {
-      defaultMode: "light",
-      disableSwitch: false,
-      respectPrefersColorScheme: false,
     },
     footer: {
-      style: "dark",
+      style: 'dark',
       links: [
         {
-          title: "Community",
+          title: 'Docs',
           items: [
             {
-              label: " Slack",
-              to: "https://github.com/PalisadoesFoundation",
-              className: "footer__icon footer__slack",
-            },
-            {
-              label: " News",
-              to: "https://www.palisadoes.org/news/",
-              className: "footer__icon footer__news",
-            },
-            {
-              label: " Contact Us",
-              to: "https://www.palisadoes.org/contact/",
-              className: "footer__icon footer__contact",
+              label: 'Tutorial',
+              to: '/docs/intro',
             },
           ],
         },
         {
-          title: "Social Media",
+          title: 'Community',
           items: [
             {
-              label: " Twitter",
-              to: "https://twitter.com/palisadoesorg?lang=en",
-              className: "footer__icon footer__twitter",
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
             },
             {
-              label: " Facebook",
-              to: "https://www.facebook.com/palisadoesproject/",
-              className: "footer__icon footer__facebook",
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
             },
             {
-              label: " Instagram",
-              to: "https://www.instagram.com/palisadoes/?hl=en",
-              className: "footer__icon footer__instagram",
+              label: 'X',
+              href: 'https://x.com/docusaurus',
             },
           ],
         },
         {
-          title: "Development",
+          title: 'More',
           items: [
             {
-              label: " GitHub",
-              to: "https://github.com/PalisadoesFoundation",
-              className: "footer__icon footer__github",
+              label: 'Blog',
+              to: '/blog',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/facebook/docusaurus',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} The Palisadoes Foundation, LLC. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  },
+  } satisfies Preset.ThemeConfig,
 };
 
 export default config;
